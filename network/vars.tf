@@ -5,6 +5,7 @@ variable "user_ocid" {}
 variable "fingerprint" {}
 variable "private_key_path" {}
 variable "region" {}
+variable "availability_domain" {}
 
 variable "compartment_ocid" {}
 variable "ssh_public_key_path" {}
@@ -17,6 +18,10 @@ locals {
 
 variable "vcn_cidr" {
   default = "10.1.0.0/16"
+}
+
+variable "subnet_cidr_offset" {
+  default = 5
 }
 
 variable "authorized_ips" {
